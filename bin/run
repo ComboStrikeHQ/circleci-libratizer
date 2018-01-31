@@ -9,7 +9,7 @@ CircleCi.config.token = ENV.fetch('CIRCLECI_TOKEN')
 stats = { queued: 0, running: 0 }
 
 CircleCi::RecentBuilds.new.get.body.each do |build|
-  if build['start_time'].nil?
+  if build['start_time'].nil? && build['stop_time'].nil?
     stats[:queued] += 1
   elsif build['stop_time'].nil?
     stats[:running] += 1
