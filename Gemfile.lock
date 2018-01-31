@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aggregate (0.2.2)
+    circleci (2.0.2)
+    faraday (0.14.0)
+      multipart-post (>= 1.2, < 3)
+    librato-metrics (2.1.2)
+      aggregate (~> 0.2.2)
+      faraday
+    multipart-post (2.0.0)
+    yajl-ruby (1.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  circleci
+  librato-metrics
+  yajl-ruby
+
+BUNDLED WITH
+   1.16.1
